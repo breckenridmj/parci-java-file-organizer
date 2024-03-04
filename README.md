@@ -12,6 +12,10 @@ Parci reads files from a specified directory and organizes them based on an ID n
 - **City-based Categorization:** Files are placed in folders according to their associated city.
 - **Desktop Application:** Parci provides a user-friendly interface for file organization tasks.
 
+## Files
+
+The program follows a file-naming convention: XXXXXXXX_XXXXX_XXX_XXX, where the files are sorted accordingly. It's configured to extract the second entry, and the user inputs the city corresponding to the ID.
+
 ## Usage
 
 1. **Download and Install:**
@@ -21,21 +25,24 @@ Parci reads files from a specified directory and organizes them based on an ID n
 2. **Set Up:**
    - Specify the directory containing the files to be organized.
    - Choose the destination directory for the organized files.
-
+     
+3. **Input the Sort Entries:**
+   - By pressing the manage button input the entries manually or by csv.
+   - Also by default, the program skips the first line in the csv which is usually the header
+  
+4. **Select File Type:**
+   - Specify the file type that you want to sort (ex. .doc, .pdf, .txt, etc..)
+  
 3. **Run the Program:**
-   - Click on the "Organize Files" button to initiate the organization process.
+   - Click on the "Sort" button to initiate the organization process.
 
 4. **Review Results:**
    - Check the destination directory for the organized files, categorized by city.
 
 ## Requirements
 
-- Java Development Kit (JDK) 8 or higher
+- Java Development Kit (JDK) 21 or higher
 
 ## Contributing
 
 Contributions are welcome! If you have ideas for improvements, please create an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
