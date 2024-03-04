@@ -2,6 +2,14 @@
 
 Parci is a Java desktop application designed to organize files based on an ID number and place them in their respective city categories.
 
+## Requirements
+
+- **Intellij:** IDE used to develop this program and convert the .java file into a .jar file. (Link: https://www.jetbrains.com)
+- **Launch4j:** Used to convert the .jar file into a .exe executable. (Link: https://launch4j.sourceforge.net)
+- **Inoo:** Used to create the .exe installer/setup. (Link: https://jrsoftware.org/isdl.php)
+- **Convertio:** Used to convert image file into a .ico file. (Link: https://convertio.co)
+- **JDK Developer Kit** Used for Java Runtime Environment. (Link: https://www.oracle.com/java/technologies/downloads/#jdk21-windows)
+
 ## How it Works
 
 Parci reads files from a specified directory and organizes them based on an ID number found in the file names. It then categorizes these files into folders corresponding to their respective cities.
