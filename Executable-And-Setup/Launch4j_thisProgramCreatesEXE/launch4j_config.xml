@@ -2,8 +2,8 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
-  <jar>C:\Users\malcolmb\Desktop\Java Projects\Parci\Launch4j\PARCI.jar</jar>
-  <outfile>C:\Users\malcolmb\Desktop\Java Projects\Parci\Launch4j\parci._v1.0.0_beta-release.exe</outfile>
+  <jar>C:\Users\malcolmb\Java Projects\parci-java-file-organizer-desktop-application\Executable-And-Setup\Launch4j_thisProgramCreatesEXE\parci_v1.0.0_beta-release.jar</jar>
+  <outfile>C:\Users\malcolmb\Java Projects\parci-java-file-organizer-desktop-application\Executable-And-Setup\Launch4j_thisProgramCreatesEXE\parci_v1.0.0_beta-release.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -13,13 +13,13 @@
   <stayAlive>false</stayAlive>
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
-  <icon>C:\Users\malcolmb\Desktop\Java Projects\Parci\Launch4j\images\parcy.ico</icon>
+  <icon>C:\Users\malcolmb\Java Projects\parci-java-file-organizer-desktop-application\Executable-And-Setup\Launch4j_thisProgramCreatesEXE\images\parcy.ico</icon>
   <singleInstance>
     <mutexName>Parci</mutexName>
     <windowTitle>Parci</windowTitle>
   </singleInstance>
   <jre>
-    <path>C:\Users\malcolmb\Desktop\Java Projects\Parci\Launch4j\jre</path>
+    <path>C:\Users\malcolmb\Java Projects\parci-java-file-organizer-desktop-application\Executable-And-Setup\Launch4j_thisProgramCreatesEXE\jre</path>
     <bundledJre64Bit>false</bundledJre64Bit>
     <bundledJreAsFallback>false</bundledJreAsFallback>
     <minVersion></minVersion>

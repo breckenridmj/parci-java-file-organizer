@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PARCI.iml" filepath="$PROJECT_DIR$/PARCI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parci-java-file-organizer-desktop-application.iml" filepath="$PROJECT_DIR$/parci-java-file-organizer-desktop-application.iml" />
     </modules>
   </component>
 </project>

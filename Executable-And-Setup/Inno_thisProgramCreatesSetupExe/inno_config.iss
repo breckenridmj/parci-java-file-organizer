@@ -5,7 +5,7 @@
 #define MyAppVersion "1.0.0.0"
 #define MyAppPublisher "Malcolm Breckenridge"
 #define MyAppURL "https://github.com/breckenridmj/parci-java-file-organizer"
-#define MyAppExeName "parci._v1.0.0_beta-release.exe"
+#define MyAppExeName "parci_v1.0.0_beta-release.exe"
 #define MyAppAssocName "parci"
 #define MyAppAssocExt ".myp"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
@@ -27,9 +27,9 @@ ChangesAssociations=yes
 DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputDir=C:\Users\malcolmb\Desktop\Java Projects\Parci\Inno
+OutputDir=C:\Users\malcolmb\Java Projects\parci-java-file-organizer-desktop-application\Executable-And-Setup\Inno_thisProgramCreatesSetupExe\
 OutputBaseFilename=setup_parci_v1.0.0_beta-release
-SetupIconFile=C:\Users\malcolmb\Desktop\Java Projects\Parci\Launch4j\images\parcy.ico
+SetupIconFile=C:\Users\malcolmb\Java Projects\parci-java-file-organizer-desktop-application\Executable-And-Setup\Launch4j_thisProgramCreatesEXE\images\parcy.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -41,8 +41,8 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\malcolmb\Desktop\Java Projects\Parci\Launch4j\parci._v1.0.0_beta-release.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\malcolmb\Desktop\Java Projects\Parci\Launch4j\jre\*"; DestDir: "C:\Program Files (x86)\Parci\jre"; Flags: recursesubdirs createallsubdirs
+Source: "C:\Users\malcolmb\Java Projects\parci-java-file-organizer-desktop-application\Executable-And-Setup\Launch4j_thisProgramCreatesEXE\parci_v1.0.0_beta-release.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\malcolmb\Java Projects\parci-java-file-organizer-desktop-application\Executable-And-Setup\Launch4j_thisProgramCreatesEXE\jre\*"; DestDir: "C:\Program Files (x86)\Parci\jre"; Flags: recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]

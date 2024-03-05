@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.BorderFactory;
@@ -25,8 +26,13 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.border.Border;
 import javax.swing.filechooser.FileNameExtensionFilter;
-
 import java.nio.file.StandardCopyOption;
+
+import org.apache.pdfbox.Loader;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 // useful layout help
 // https://www.youtube.com/watch?app=desktop&v=8pEXo1oVWvU
@@ -42,6 +48,8 @@ public class MyFrame extends JFrame {
     ImageIcon image;
     JTextArea logArea;
     JComboBox<String> fileSelector;
+    JButton renameButton;
+    JButton sortButton;
 
     // Hash Map that holds target number and city
     private Map<Integer, NumberStringPair> numberCityMap = new HashMap<>();
@@ -128,7 +136,7 @@ public class MyFrame extends JFrame {
         controlPanel.add(manageButton);
 
         // Button to start file search
-        JButton sortButton = new JButton("SORT");
+        sortButton = new JButton("SORT");
         sortButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -198,6 +206,112 @@ public class MyFrame extends JFrame {
         //fileSelector.setBorder(border);
         controlPanel.add(fileSelector);
 
+        // Rename Button
+        // Fetch ID From inside each PDF file in a folder and rename each pdf according to their ID
+        renameButton = new JButton("RENAME PDFs");
+        renameButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                rename();
+            }
+        });
+        renameButton.setBounds(25,140,120,25);
+        renameButton.setBorderPainted(true);
+        renameButton.setBorder(border);
+        controlPanel.add(renameButton);
+
+    }
+
+    // Rename Files Based on ID
+    private void rename() {
+        // File chooser
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        int result = fileChooser.showOpenDialog(null);
+
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File folder = fileChooser.getSelectedFile();
+            if (folder.isDirectory()) {
+                File[] files = folder.listFiles();
+                if (files != null) {
+                    for (File file : files) {
+                        if (file.isFile() && file.getName().toLowerCase().endsWith(".pdf")) {
+                            try {
+                                String[] fileNameParts = extractFileNameParts(file.getName());
+                                if (fileNameParts != null) {
+                                    String id = extractIdFromPDF(file);
+                                    if (id != null) {
+                                        String newName = fileNameParts[1] + "_" + id + "_" + fileNameParts[0] + ".pdf";
+                                        File newFile = new File(folder, newName);
+                                        if (file.renameTo(newFile)) {
+                                            System.out.println("File renamed successfully from: " + file.getName() +"  To: "+ newFile.getName());
+                                            logArea.append("File renamed successfully from: " + file.getName() +"  To: "+ newFile.getName() + "\n");
+                                        } else {
+                                            System.err.println("Failed to rename file: " + file.getName());
+                                            logArea.append("Failed to rename file: " + file.getName() + "\n");
+                                        }
+                                    } else {
+                                        System.err.println("Failed to extract ID from PDF: " + file.getName());
+                                        logArea.append("Failed to extract ID from PDF: " + file.getName() + "\n");
+                                    }
+                                } else {
+                                    System.err.println("Failed to extract original file name parts: " + file.getName());
+                                }
+                            } catch (IOException ex) {
+                                ex.printStackTrace();
+                            }
+                        }
+                    }
+                }
+            } else {
+                System.err.println("Please select a directory.");
+            }
+        }
+
+
+    }
+
+    private static String[] extractFileNameParts(String fileName) {
+
+        // Remove the extension
+        int dotIndex = fileName.lastIndexOf('.');
+        if (dotIndex != -1) {
+            fileName = fileName.substring(0, dotIndex);
+        }
+        System.out.println("extractFileNameParts Method filename: " + fileName);
+
+        String[] parts = fileName.trim().split("_");
+        System.out.println("Extract File Name Parts Method:");
+        System.out.println(Arrays.toString(parts));
+        if (parts.length == 2) {
+            return parts;
+
+        } else {
+            return null;
+        }
+    }
+
+    //Extract ID from file method
+    private static String extractIdFromPDF(File pdfFile) throws IOException {
+        System.out.println(pdfFile);
+        PDDocument document = Loader.loadPDF(pdfFile);
+        PDFTextStripper stripper = new PDFTextStripper();
+        String text = stripper.getText(document);
+        document.close();
+
+        // Define your pattern to extract ID between dashed lines
+        Pattern pattern = Pattern.compile("-\\s*(\\d+)\\s*-");
+        Matcher matcher = pattern.matcher(text);
+
+        // Skip the first match
+        matcher.find();
+
+        // Check if there is a second match
+        if (matcher.find()) {
+            return matcher.group(1); // Return the first captured group
+        } else {
+            return null;
+        }
     }
 
     // Print Hash Map Entries Function

@@ -2,7 +2,7 @@
   <artifact type="jar" name="PARCI:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/PARCI_jar</output-path>
     <root id="archive" name="PARCI.jar">
-      <element id="module-output" name="PARCI" />
+      <element id="module-output" name="parci-java-file-organizer-desktop-application" />
     </root>
   </artifact>
 </component>
