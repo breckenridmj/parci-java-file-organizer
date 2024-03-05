@@ -14,8 +14,9 @@ Parci is a Java desktop application designed to organize files based on an ID nu
 - **Convertio:** Used to convert image file into a .ico file. (Link: https://convertio.co)
 - **JDK Developer Kit** Used for Java Runtime Environment. (Link: https://www.oracle.com/java/technologies/downloads/#jdk21-windows)
 - **Apache PDFBox Libraries:** Used to load and read PDF Document in Java. (Link: https://pdfbox.apache.org/download.html)
-- **Apache Logging Libraries:** Used to load and read PDF Document in Java. (Link: https://commons.apache.org/proper/commons-logging/download_logging.cgi)
-
+- **Apache Logging Libraries:** Used for logging PDF Document in Java. (Link: https://commons.apache.org/proper/commons-logging/download_logging.cgi)
+- **Apache Font Libraries:** Used for reading PDF Document in Java. (Link: https://www.apache.org/dyn/closer.lua/pdfbox/3.0.1/fontbox-3.0.1.jar)
+  
 ## How it Works
 
 Parci reads files from a specified directory and organizes them based on an ID number found in the file names. It then categorizes these files into folders corresponding to their respective cities.
