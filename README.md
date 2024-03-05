@@ -39,20 +39,24 @@ The program follows a file-naming convention: XXXXXXXX_XXXXX_XXX_XXX, where the 
    - Compile and run the Java program.
    
 2. **Set Up:**
-   - Specify the directory containing the files to be organized.
-   - Choose the destination directory for the organized files.
+   - Specify the directory containing the files to be organized using the Source Button.
+   - Choose the destination directory for the organized files to be placed using the Output Button.
+  
+3. **Rename PDFs (Optional):**
+   - Specify the directory containing the files to be renamed according to the ID within the PDF.
+   - Once selected the program will automatically parse through and change all the file names.
      
-3. **Input the Sort Entries:**
+4. **Input the Sort Entries:**
    - By pressing the manage button input the entries manually or by csv.
    - Also by default, the program skips the first line in the csv which is usually the header
   
-4. **Select File Type:**
+5. **Select File Type:**
    - Specify the file type that you want to sort (ex. .doc, .pdf, .txt, etc..)
   
-3. **Run the Program:**
+6. **Run the Program:**
    - Click on the "Sort" button to initiate the organization process.
 
-4. **Review Results:**
+7. **Review Results:**
    - Check the destination directory for the organized files, categorized by city.
 
 ## Requirements
