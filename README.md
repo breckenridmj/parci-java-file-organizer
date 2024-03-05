@@ -13,6 +13,7 @@ Parci is a Java desktop application designed to organize files based on an ID nu
 - **Inoo:** Used to create the .exe installer/setup. (Link: https://jrsoftware.org/isdl.php)
 - **Convertio:** Used to convert image file into a .ico file. (Link: https://convertio.co)
 - **JDK Developer Kit** Used for Java Runtime Environment. (Link: https://www.oracle.com/java/technologies/downloads/#jdk21-windows)
+- **Apache PDFBox Libraries:** Used to load and read PDF Document in Java. (Link: https://pdfbox.apache.org/download.html)
 
 ## How it Works
 
