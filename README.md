@@ -2,7 +2,7 @@
 
 Parci is a Java desktop application designed to organize files based on an ID number and place them in their respective city categories.
 
-![image](https://github.com/breckenridmj/parci-java-file-organizer/assets/59925642/4277132c-993f-4a38-84a9-ed055c93eda4)
+![image](https://github.com/breckenridmj/parci-java-file-organizer/assets/59925642/604a57fe-4e97-40dd-9e2c-6aeffdf64a82)
 
 ![image](https://github.com/breckenridmj/parci-java-file-organizer/assets/59925642/da87c458-ae03-41df-acaf-399b90c8bcd9)
 
