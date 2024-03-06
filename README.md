@@ -54,9 +54,15 @@ The program follows a file-naming convention: XXXXXXXX_XXXXX_XXX_XXX, where the 
   
 6. **Run the Program:**
    - Click on the "Sort" button to initiate the organization process.
+  
+6. **Rename PDFs:**
+   - Click the "Rename PDFs" button to search each PDF for the ID and rename it to its convention.
+     
+6. **Generate Report:**
+   - Click the "Generate Report" button to merge all pdf files into one for each subfolder and entire directory. 
 
 7. **Review Results:**
-   - Check the destination directory for the organized files, categorized by city.
+   - Check the destination directory for the organized files, categorized by city. Also click the "Print" button to print any pdf file.
 
 ## Requirements
 
